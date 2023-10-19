@@ -3,9 +3,9 @@ import './App.css';
 
 function App() {
   return (
-    <Router>
-      <MainNavigation />
-    </Router>
+    <div className="App">
+      
+    </div>
   );
 }
 
