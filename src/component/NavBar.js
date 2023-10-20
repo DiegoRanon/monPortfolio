@@ -1,5 +1,5 @@
 import {useState, useEffect} from "react";
-import { Navbar, Container } from "react-bootstrap";
+import { Navbar, Nav, Container } from "react-bootstrap";
 import logo from '../assets/img/logo.svg';
 import navIcon1 from '../assets/img/nav-icon1.svg';
 import navIcon2 from '../assets/img/nav-icon2.svg';
@@ -9,7 +9,7 @@ import navIcon3 from '../assets/img/nav-icon3.svg';
 export const NavBar = () => {
     const [activeLink, setActiveLink] = useState('home');
     const [scrolled, seScrolled] = useState(false);
-
+    // Detect si on scroll en haut ou en bas
     useEffect(() => {
         const onScroll = () => {
             if(window.scrollY > 50) {
@@ -23,7 +23,7 @@ export const NavBar = () => {
 
         return () => window.removeEventListener("scroll", onScroll);
     }, []);
-
+    // Detecte le link actif
     const onUpdateActiveLink = (value) => {
         setActiveLink(value);
     }
